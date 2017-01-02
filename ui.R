@@ -33,15 +33,15 @@ shinyUI(fluidPage(
       sliderInput("male.spread",
                   "Standard Deviation",
                   min = 0,
-                  max = 0.5,
-                  value = 0.03,
-                  step = 0.01),
+                  max = 10,
+                  value = 5.8,
+                  step = 0.1),
       sliderInput("female.spread",
                   "Standard Deviation",
                   min = 0,
-                  max = 0.5,
-                  value = 0.06,
-                  step = 0.01)
+                  max = 10,
+                  value = 7.9,
+                  step = 0.1)
     ),
     
     # Show a plot of the generated distribution
