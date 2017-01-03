@@ -9,7 +9,7 @@ shinyServer(function(input, output) {
     norm1 <- rnorm(input$male.phys.sample, mean = input$male.mean, sd = input$male.spread)
     norm2 <- rnorm(input$female.phys.sample, mean = input$female.mean, sd = input$female.spread)
     t.result <- t.test(norm1, norm2)
-    p <- ggplot(data.frame(data = c(norm1, norm2), Groups = c(rep('Male', length(norm1)), rep('Female', length(norm2)))), aes(data, color = Groups)) + 
+    p <- ggplot(data.frame(data = c(norm1, norm2), Physicians = c(rep('Male', length(norm1)), rep('Female', length(norm2)))), aes(data, color = Physicians)) + 
       geom_histogram(position = "dodge", fill = 'white', alpha = 0.5) + 
       labs(x="", y="") +
       theme_bw() +
